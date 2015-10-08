@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <form action="/todo">
+    	<button type="submit"> Get List Of Task </button>
+    </form>
+    <form action='/todo' method='post'>
+    	<button type="submit"> Insert New Task </button>
+    </form>
+  </body>
+</html>
