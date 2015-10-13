@@ -10,4 +10,15 @@ router.get('/', function(req, res, next) {
 	
 });
 
+router.post('/', function(req, res, next) {
+	var datax = req.body.data;
+	console.log(datax);
+	todoList.insert(datax, function ( err, data){
+		if(err) res.render('err');
+		res.send({ title : "Todo List", todoList : data});	
+	});
+	
+});
+
+
 module.exports = router;

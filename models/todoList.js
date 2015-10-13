@@ -17,11 +17,17 @@ module.exports.findAll = function  (callback) {
 }
 
 module.exports.findx = function  (data,callback) {
-	todoList.find( { 'task' :  data},function ( err, task){
+	todolist.find( { 'task' :  data},function ( err, task){
 		if (err) console.log(err);
 		callback(null,task);
 	});
 }
 
+module.exports.insert = function  (data,callback) {
+	todolist.create( { 'task' :  data},function ( err, task){
+		if (err) console.log(err);
+		callback(null,task);
+	});
+}
 
  
