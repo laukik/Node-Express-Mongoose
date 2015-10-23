@@ -11,13 +11,13 @@ module.exports.findAll = function  (callback) {
 	
 	todolist.find(function ( err, data){
 		if (err) console.log(err);
-		console.log(todolist);
+		//console.log(todolist);
 		callback(null,data);
 	});
 }
 
 module.exports.findx = function  (data,callback) {
-	todolist.find( { 'task' :  data},function ( err, task){
+	todolist.find( { 'task' :  data, '_id':'0'},function ( err, task){
 		if (err) console.log(err);
 		callback(null,task);
 	});

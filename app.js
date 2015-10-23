@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 
 // Mongoose import
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://127.0.0.1/todo');
+mongoose.connect('mongodb://0.0.0.0/todo');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');

@@ -2,15 +2,15 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   </head>
   <body>
     <h1><%= title %></h1>
     <form action="/todo">
-    	<button type="submit"> Get List Of Task </button>
+    	<button  class=' form btn btn-primary' type="submit"> Get List Of Task </button>
     </form>
-    <form action='/todo' method='post'>
-    	<button type="submit"> Insert New Task </button>
+    <form class='form' action='/' method='post'>
+    	<button class=' form-input btn btn-success' type="submit"> Insert New Task </button>
     </form>
   </body>
 </html>

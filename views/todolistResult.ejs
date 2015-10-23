@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  </head>
+  <body>
+    <% for( var i = 1; i < todoList.length ; i++){%>
+        <% if ( i %2 == 0){%>
+            <span class="label label-warning"> <%= todoList[i].task %> </todoList></span> </br>
+        <% }else{ %>
+            <span class="label label-success"> <%= todoList[i].task %> </todoList></span> </br>
+        <% } %>
+    <% }%>
+  </body>
+</html>

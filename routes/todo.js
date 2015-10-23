@@ -5,7 +5,7 @@ var todoList = require('../models/todoList');
 router.get('/', function(req, res, next) {
 	todoList.findAll( function ( err, data){
 		if(err) res.render('err');
-		res.send({ title : "Todo List", todoList : data});	
+		res.render('todolistResult',{ title : "Todo List", todoList : data});	
 	});
 	
 });
@@ -15,8 +15,9 @@ router.post('/', function(req, res, next) {
 	console.log(datax);
 	todoList.insert(datax, function ( err, data){
 		if(err) res.render('err');
-		res.send({ title : "Todo List", todoList : data});	
+		res.render('todolistResult',{ title : "Todo List", todoList : data});
 	});
+	res.redirect('/');
 	
 });
 
